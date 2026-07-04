@@ -1,0 +1,13 @@
+class Solution {
+    public String removeTrailingZeros(String num) {
+        int i = num.length() - 1;
+
+        // Move backwards while there are trailing zeros
+        while (i >= 0 && num.charAt(i) == '0') {
+            i--;
+        }
+
+        // Return the string without trailing zeros
+        return num.substring(0, i + 1);
+    }
+}
